@@ -104,6 +104,31 @@ nav{
     box-shadow: 2px 2px 4px black;
 }
 
+.info-box{
+    width: 90%;
+    margin: auto;
+}
+
+.info-box h3{
+    margin-top: 20px;
+    text-align: left;
+    font-size: 36px;
+}
+
+.info-box h3::after{
+    content: '';
+    width: 10%;
+    height: 5px;
+    background: crimson;
+    display: block;
+    position: absolute;
+}
+
+.info-box p{
+    margin: 25px auto;
+    font-size: 23px;
+}
+
 .gallery{
     margin-top: 15px;
     margin: auto;
@@ -118,7 +143,8 @@ nav{
 .gallery h3{
     text-align: center;
     font-size: 40px;
-    margin-top: 10px;
+    padding: 20px;
+    margin-top: 20px;
     margin: auto;
     width: fit-content;
 }
@@ -146,35 +172,7 @@ nav{
 .photo-box img:hover{
     box-shadow: 2px 3px 2px black;
 }
-/*.contact{
-    width: 90%;
-    margin: auto;
-}
-.contact h1{
-    text-align: center;
-    font-size: 60px;
-    margin-top: 10px;
-    align-items: center;
-}
-.input-box{
-    width: 100%;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-input{
-    margin: auto;
-    align-self: center;
-    padding: 12px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    width: 50%;
-    height: 40px;
-    border: 2px solid crimson;
-    border-radius: 15px;
-}*/
+
 @media(max-width: 700px){
     nav{
         display: none;

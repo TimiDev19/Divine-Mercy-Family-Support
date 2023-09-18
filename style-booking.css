@@ -5,12 +5,15 @@
 }
 
 .header{
-    min-height: 100vh;
-    padding: 8px;
+    min-height: fit-content;
+    padding: 21px;
     background-position: center;
     background-size: cover;
     position: relative;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./img/Maid_Bright_2022_Indoors-288-1024x683.jpg);
+}
+.l{
+    display: none;
 }
 nav{
     display: flex;
@@ -54,29 +57,6 @@ nav{
     margin-top: 30px;
     font-size: 60px;
 }
-.main-box{
-    width: 60%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(44, 23, 97);
-    margin-top: 50px;
-    padding: 10px;
-    border-radius: 15px;
-}
-.main-box p{
-    color: white;
-    font-size: 25px;
-    width: 80%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-.main-box span{
-    color: orange;
-}
 .buttons{
     width: 80%;
     margin: auto;
@@ -85,7 +65,7 @@ nav{
     grid-template-columns: repeat(2, 1fr);
 }
 .btn{
-    margin: 10px 3px;
+    margin: 20px;
     height: 40px;
     border: none;
     border-radius: 10px;
@@ -93,126 +73,52 @@ nav{
     color: white;
     font-size: 16px;
     cursor: pointer;
+    width: 20%;
 }
 .btn a{
     text-decoration: none;
     color: white;
 }
 .btn:hover{
-    margin: 1px;
+    width: 30%;
     height: 45px;
 }
-.service-box img{
-    width: 100%;
-}
-.services{
+.location{
     width: 90%;
     margin: auto;
-    text-align: center;
-    align-items: center;
-}
-.services h3{
-    margin: 20px;
-    color: gray;
-}
-.services p{
-    font-size: 16px;
-    color: gray;
-}
-.services-info{
-    width: 90%;
-    margin: auto;
-    padding: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.services-info-box{
-    width: 90%;
+.location-box{
     margin: auto;
     padding: 20px;
-    border-right: 2px gray solid;
-    text-align: left;
 }
-.services-info-box p,
-.services-info-box1 p{
-    padding: 10px;
-    font-size: 16px;
-}
-.services-info-box1{
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-    text-align: left;
-}
-.services-info-box h3 span{
-    margin: 20px 0;
-    color: orange;
-    font-size: 40px;
-}
-.prices{
-    background-color: orange;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-.prices h3{
-    font-size: 30px;
-}
-.price-table{
-    width: 60%;
-    margin: auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.prices-box1{
-    text-align: left;
-    height: 45px;
-    background-color: #fff;
-    color: gray;
-    margin: 2px;
-}
-.prices-box1 h4{
-    padding: 15px;
-}
-.prices p{
-    margin: 18px;
-}
-.hire{
+.location-box img{
     width: 80%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
-}
-.hire-box{
-    margin: 10px;
-}
-.hire-box img{
-    width: 50%;
     border-radius: 10px;
-    box-shadow: 1px 2px 5px 0 black;
+    box-shadow: 2px 2px 4px 0 black;
 }
-.hire-box h1{
-    color: gray;
-    margin-bottom: 10px;
-}
-.hire-box p{
-    font-size: 18px;
+.location-box h1{
     color: gray;
 }
-.btn1{
+.location-box form ul li{
+    list-style: none;
+}
+.location-box form ul li input{
+    height: 50px;
+    margin: 15px;
     padding: 10px;
-    background-color: orange;
-    color: white;
-    font-size: 14px;
+    width: 80%;
+    background-color: lightgray;
     border: none;
-    border-radius: 7px;
-    margin-top: 20px;
+    border-radius: 8px;
 }
-.btn1 a{
-    text-decoration: none;
+.location-box form ul li input::placeholder{
     color: #fff;
+    font-size: 16px;
+}
+.location-box form ul li input:active{
+    border: none;
 }
 .footer{
     background-color: rgb(42, 20, 97);
@@ -244,27 +150,6 @@ nav{
 .footer-box span{
     color: orange;
 }
-.backup{
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-    background-color: rgb(44, 23, 97);
-}
-.backup-box{
-    width: 90%;
-    margin: auto;
-    color: #fff;
-}
-.backup h1{
-    color: #fff;
-    padding: 20px;
-}
-.backup p{
-    padding: 20px;
-}
-.backup{
-    display: none;
-}
 @media(max-width: 729px){
     .main-box{
         display: none;
@@ -279,16 +164,29 @@ nav{
     .prices-box1 h4{
         padding: 7.8px;
     }
-    nav{
+    .l{
+        display: block;
+    }
+    .l a{
+        color: #fff;
+        font-size: 50px;
+    }
+    .l a:hover{
+        color: aqua;
+    }
+    nav h1{
         display: none;
     }
-    .backup{
-        display: block;
+    .nav-links{
+        display: none;
     }
 }
 @media(max-width: 567px){
-    .prices-box1{
-        height: 70px;
+    .location{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media(max-width: 486px){
